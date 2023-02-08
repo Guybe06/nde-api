@@ -28,6 +28,6 @@ server.get('/', (req, res) => {
 // server.use('/post', postRoutes);
 // server.use('/user', userRoutes);
 
-server.listen(process.env.SERVER_PORT);
+server.listen(process.env.PORT || 3977);
 
 export default server;
