@@ -28,6 +28,6 @@ import { postRoutes, userRoutes } from './routes/';
 server.use('/post', postRoutes);
 server.use('/user', userRoutes);
 
-server.listen(process.env.PORT || 3977);
+server.listen(process.env.SERVER_PORT);
 
 export default server;
