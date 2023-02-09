@@ -24,9 +24,9 @@ server.get('/', (req, res) => {
     });
 });
 
-// import { postRoutes, userRoutes } from './routes/';
-// server.use('/post', postRoutes);
-// server.use('/user', userRoutes);
+import { postRoutes, userRoutes } from './routes/';
+server.use('/post', postRoutes);
+server.use('/user', userRoutes);
 
 server.listen(process.env.PORT || 3977);
 
