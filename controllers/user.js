@@ -16,23 +16,23 @@ export default {
             });
     },
     get(req, res) {
-        const { id } = req.params;
+        const { name } = req.params;
 
         User.findUnique({
             where: {
-                id: parseInt(id),
+                name: name,
             },
         })
             .then((data) => {
                 data
                     ? res.status(200).send(data)
                     : res.status(404).send({
-                          message: `Cannot find user with id=${id}`,
+                          message: `Cannot find user with name=${name}`,
                       });
             })
             .catch((error) => {
                 res.status(500).send({
-                    message: error.message || `Some error occured when retrieving user with id=${id}`,
+                    message: error.message || `Some error occured when retrieving user with name=${name}`,
                 });
             });
     },
